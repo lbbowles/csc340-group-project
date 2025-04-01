@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Utilizing href pure-CSS as recommended-->
+<head>
+  <title>Tutelage</title>
+  <link href="style.css" rel="stylesheet">
+  <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+        integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" rel="stylesheet">
+</head>
+
+
+
+<body>
+
+<header>
+  <div class="pure-menu pure-menu-horizontal">
+    <ul class="pure-menu-list">
+      <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+
+
+        <a class="pure-menu-link" href="#" id="menuLink1">
+          <img alt="Menu Image" height="25" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/640px-Hamburger_icon.svg.png" width="25">
+        </a>
+
+
+        <ul class="pure-menu-children">
+          <li class="pure-menu-item">
+            <a class="pure-menu-link" href="#">Home</a>
+          </li>
+          <li class="pure-menu-item">
+            <a class="pure-menu-link" href="#">Commitments</a>
+          </li>
+          <li class="pure-menu-item">
+            <a class="pure-menu-link" href="#">About Us</a>
+          </li>
+        </ul>
+
+
+      </li>
+    </ul>
+
+  </div>
+
+  <img alt="Tutelage Logo" height="91"
+       src="images/Tutelege.png" width="145">
+
+</header>
+
+<!-- Just print a little hello message-->
+<br>
+<h3>Good afternoon tutor!  Let's do something amazing...
+  <br> ______________________________________________ <br></h3>
+
+<h5>Add new classes you're available to tutor and days that work for you below!:</h5>
+
+<!-- Let the tutor add classes they can tutor.  Forms from PureCSS website and augmented -->
+<div class="new-availability">
+  <form class="pure-form">
+    <fieldset class="pure-group">
+      <input class="pure-input-1" placeholder="Course Name" type="text" />
+      <input class="pure-input-1" placeholder="Course ID" type="text" />
+      <input class="pure-input-1" placeholder="Days and times Available" type="email" />
+    </fieldset>
+    <fieldset class="pure-group">
+      <input class="pure-input-1-2" placeholder="Listing name" type="text" />
+      <textarea class="pure-input-1-2" placeholder="Services description (make it stand out!)"></textarea>
+    </fieldset>
+    <button class="pure-button pure-input-1-2 pure-button-primary" type="submit">Post</button>
+  </form>
+</div>
+
+
+<!--For a divider between creating a new post and editing days off / available -->
+<br>
+<footer></footer>
+<br><br>
+
+<!-- Allow tutor to edit their schedule for the month / request days off-->
+<h5>Request Time Off:</h5>
+
+<div class="new-availability">
+  <form class="pure-form">
+    <fieldset class="pure-group">
+      <input class="pure-input-1" placeholder="Month" type="text" />
+      <input class="pure-input-1" placeholder="Day" type="text" />
+    </fieldset>
+    <button class="pure-button pure-input-1-2 pure-button-primary" type="submit">Request</button>
+  </form>
+</div>
+
+<!-- Place the footer -->
+<footer>
+
+  <img alt ="X" height="20" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/X_logo_2023_%28white%29.png/480px-X_logo_2023_%28white%29.png" width ="25">
+  <img alt ="Instagram" height="21" src="https://img.icons8.com/win10/512/FFFFFF/instagram-new.png" width ="35">
+  <img alt ="Discord" height ="20" src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/636e0a6cc3c481a15a141738_icon_clyde_white_RGB.png" width ="25">
+  <img alt ="Facebook" height ="20" src="https://img.icons8.com/m_sharp/512/FFFFFF/facebook-new.png" width ="25">
+
+</footer>
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>

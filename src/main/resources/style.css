@@ -1,0 +1,88 @@
+/*CSS file to help reduce redundancy when putting the images and the match options */
+
+/*
+ * Website looks better with everything centered in the body.
+ */
+body {
+    text-align: center;
+}
+
+/*
+ * Print images with default height/width from the image folder
+ */
+.matchup-img {
+    width: 150px;
+    height: 142px;
+}
+
+
+header, footer {
+    width: 100%;
+    display: block;
+}
+
+
+/*
+ * Header code so that the header is customized for the website, important because I will use it on every page
+ */
+header {
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.landing-page {
+    background: url('/images/Tutelage.png') no-repeat center center fixed;
+    background-size: cover;
+    background-color: white;
+    color: white;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 60px 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Ensure footer is fixed and styled */
+footer {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Consistent button width */
+a.btn {
+    min-width: 180px;
+}
+
+
+/*
+ * Given by the Pure-CSS website to implement a menu to traverse to the other pages.
+ */
+.custom-restricted-width {
+    /* To limit the menu width to the content of the menu: */
+    display: inline-block;
+    /* Or set the width explicitly: */
+    /* width: 10em; */
+}
+

@@ -1,5 +1,7 @@
 package com.csc340.project.posting;
+import com.csc340.project.customer.Customer;
 import com.csc340.project.tutor.Tutor;
+
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
@@ -27,7 +29,7 @@ public class Posting {
     private LocalDateTime createdAt;
 
     // Posting description
-    @Column(nullable = false, length = 100)
+    @Column(length = 100)
     private String postDescription;
 
     // Rate made by the tutor per session.
@@ -39,8 +41,22 @@ public class Posting {
     boolean status;
 
     // This is the only nullable, if there is a student connected to the course, then add them here, if not, then it is null.
-    @Column(length = 8)
-    int studentId;
+    @ManyToOne
+    @JoinColumn(name = "customer_id") // must match column in your DB or will auto-create one
+    private Customer customer;
+
+    //Section for customers to be able to add ratings.
+    @Column
+    private Integer ratingScore;  // e.g., 1–5
+
+    @Column(length = 255)
+    private String ratingComment;
+
+
+
+
+
+    // Ratings inclusion.
 
 
     // Set up relationship to tutors.  One tutor can have many postings.  Postings must have a tutor.
@@ -120,13 +136,9 @@ public class Posting {
         this.status = status;
     }
 
-    public int getStudentId() {
-        return studentId;
-    }
+    public Customer getCustomer() { return customer; }
 
-    public void setStudentId(int studentId) {
-        this.studentId = studentId;
-    }
+    public void setCustomer(Customer customer) { this.customer = customer; }
 
     public Tutor getTutor() {
         return tutor;
@@ -135,4 +147,13 @@ public class Posting {
     public void setTutor(Tutor tutor) {
         this.tutor = tutor;
     }
+
+    public Integer getRatingScore() {return ratingScore; }
+
+    public void setRatingScore(Integer ratingScore) {this.ratingScore = ratingScore;}
+
+    public String getRatingComment() {return ratingComment;}
+
+    public void setRatingComment(String ratingComment) {this.ratingComment = ratingComment;}
+
 }

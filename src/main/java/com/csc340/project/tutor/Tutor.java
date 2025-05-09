@@ -26,7 +26,7 @@ public class Tutor {
     private String description;
 
     //Allow the tutor to print what courses they are proficient in.
-    @Column(length = 30)
+    @Column(length = 200)
     private String courses;
 
     //Allow the tutor to put the socials they are comfortable tutoring through (Phone-Call, Discord, etc).
@@ -38,7 +38,7 @@ public class Tutor {
     private int rating;
 
     //Allowing the user to input a file location will allow the database to store it where it is needed
-    @Column(length = 100)
+    @Column(length = 200)
     private String photo;
 
     //Without id
@@ -133,8 +133,7 @@ public class Tutor {
         this.rating = rating;
     }
 
-    public String getPhoto() {
-        return photo;
+    public String getPhoto() {return photo;
     }
 
     public void setPhoto(String photo) {

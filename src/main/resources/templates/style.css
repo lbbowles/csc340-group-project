@@ -1,0 +1,56 @@
+/*CSS file to help reduce redundancy when putting the images and the match options */
+
+/*
+ * Website looks better with everything centered in the body.
+ */
+body {
+    text-align: center;
+}
+
+/*
+ * To reduce redundancy in printing the daily matchups
+ */
+.matchup-row {
+    display: inline-block; /* Align images horizontally */
+}
+
+/*
+ * Print images with default height/width from the image folder
+ */
+.matchup-img {
+    width: 150px;
+    height: 142px;
+}
+
+header, footer {
+    width: 100%;
+    display: block;
+}
+
+
+/*
+ * Header code so that the header is customized for the website, important because I will use it on every page
+ */
+header {
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/*
+ * Given by the Pure-CSS website to implement a menu to traverse to the other pages.
+ */
+.custom-restricted-width {
+    /* To limit the menu width to the content of the menu: */
+    display: inline-block;
+    /* Or set the width explicitly: */
+    /* width: 10em; */
+}
+

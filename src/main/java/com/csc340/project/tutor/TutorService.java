@@ -1,5 +1,6 @@
 package com.csc340.project.tutor;
 
+import com.csc340.project.customer.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,9 +30,7 @@ public class TutorService {
      * @return a unique Tutor.
      */
     public Tutor getTutorById(int tutorId) {
-        return tutorRepository.findById(tutorId)
-                .orElseThrow(() -> new RuntimeException("Tutor with ID " + tutorId +
-                        " not found."));
+        return tutorRepository.findById(tutorId).orElseThrow(() -> new RuntimeException("Tutor with ID " + tutorId + " not found."));
     }
 
     /**
@@ -78,6 +77,12 @@ public class TutorService {
         tutorRepository.deleteById(tutorId);
     }
 
+    // get a customer by their username
+    public Tutor getTutorByUsername(String username) {return tutorRepository.findByUsername(username);
+    }
 
 }
+
+
+
 
